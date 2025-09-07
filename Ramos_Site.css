@@ -1,0 +1,84 @@
+/*Stephanie Ramos
+September 6, 2025
+Module 6.3 Assignment
+bioSite CSS*/
+
+body{
+  background: rgba(199, 180, 155, 1);   
+  color: rgba(53, 57, 60, 1);           
+  font-family: "Source Sans 3", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    background: rgba(53, 57, 60, 1);
+    color: rgba(223, 221, 219, 1);
+    padding: 20px;
+    text-align: left;
+}
+
+#navbar {
+    background: rgba(124, 129, 127, 1);
+    color: rgba(53, 57, 60, 1);
+    overflow: hidden;
+    text-align: right;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color:rgba(205, 199, 192, 1);
+    color: rgba(124, 129, 127, 1);
+}
+
+h1, h2, h3{
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0 0 .5rem;
+}
+
+h1 { 
+    font-size: 2rem; 
+    font-weight: 700; 
+}
+
+h2 { 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+}
+
+h3 { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+}
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+img {
+  width: 500px;
+  height: auto;
+}
+
+figure {
+  margin: 1rem 0;
+  padding: .5rem;
+  border: 1px rgba(205, 199, 192, 1);
+}
+
+figcaption {
+  font-size: .9rem;
+  margin-top: .25rem;
+}
+
