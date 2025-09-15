@@ -1,84 +1,157 @@
-/*Stephanie Ramos
-September 6, 2025
-Module 6.3 Assignment
-bioSite CSS*/
+/* Stephanie Ramos 
+September 14, 2025
+Module 7.2 Assignment
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
 
 body{
-  background: rgba(199, 180, 155, 1);   
-  color: rgba(53, 57, 60, 1);           
+  background: rgba(199,180,155,1);
+  color: rgba(53,57,60,1);
   font-family: "Source Sans 3", Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  padding: 0;
 }
 
-header {
-    background: rgba(53, 57, 60, 1);
-    color: rgba(223, 221, 219, 1);
-    padding: 20px;
-    text-align: left;
-}
-
-#navbar {
-    background: rgba(124, 129, 127, 1);
-    color: rgba(53, 57, 60, 1);
-    overflow: hidden;
-    text-align: right;
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#navbar a:hover {
-    background-color:rgba(205, 199, 192, 1);
-    color: rgba(124, 129, 127, 1);
-}
-
-h1, h2, h3{
+h1,h2,h3{
   font-family: "Montserrat", Arial, sans-serif;
+  color: rgba(53,57,60,1);
   margin: 0 0 .5rem;
 }
+h1{ font-size: 2.5rem; font-weight: 700; }
+h2{ font-size: 1.5rem; font-weight: 600; }
+h3{ font-size: 1.1rem; font-weight: 600; }
 
-h1 { 
-    font-size: 2rem; 
-    font-weight: 700; 
+a{ color: rgba(124,129,127,1); text-decoration: none; }
+a:hover{ color: rgba(205,199,192,1); }
+a:visited{ color: rgba(199,180,155,1); }
+
+#container{ max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+/* Header */
+header{
+  background: rgba(53,57,60,1);
+  color: rgba(223,221,219,1);
+  padding: 20px 16px;
+}
+header h1{
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+  color: rgba(223,221,219,1);
 }
 
-h2 { 
-    font-size: 1.5rem; 
-    font-weight: 600; 
+/* Navbar */
+#navbar{
+  background: rgba(124,129,127,1);
+  border-top: 1px solid rgba(205,199,192,1);
+  border-bottom: 1px solid rgba(205,199,192,1);
+  padding: .5rem 1rem;
+  display: flex;
+  gap: .75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+#navbar a{
+  color: rgba(255,255,255,1);
+  padding: .35rem .6rem;
+  border-radius: .35rem;
+}
+#navbar a:hover{
+  background: rgba(205,199,192,1);
+  color: rgba(124,129,127,1);
 }
 
-h3 { 
-    font-size: 1.25rem; 
-    font-weight: 600; 
+#images, #hobbies{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
-#container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+
+#images > div, #hobbies > div{
+  border: 1px solid rgba(53,57,60,1);   
+  border-radius: .25rem;
+  background: rgba(255,255,255,1);
+  overflow: hidden;                     
 }
 
-img {
-  width: 500px;
-  height: auto;
-}
-
-figure {
-  margin: 1rem 0;
+/* Card title bar */
+#images > div > h3,
+#hobbies > div > h3{
+  margin: 0;
   padding: .5rem;
-  border: 1px rgba(205, 199, 192, 1);
+  text-align: center;
+  background: rgba(124,129,127,1);     
+  color: rgba(223,221,219,1);           
 }
 
-figcaption {
+
+#images > div > figure,
+#hobbies > div > figure{
+  margin: 0;
+  padding: .5rem .5rem .6rem;          
+  background: rgba(255,255,255,1);
+  border: none;
+}
+
+#images img, #hobbies img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#images figcaption, #hobbies figcaption{
+  margin-top: .35rem;
   font-size: .9rem;
-  margin-top: .25rem;
+  color: rgba(53,57,60,1);
 }
 
+
+#hobbies > h2, #hobbies > h3{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 .25rem;
+}
+
+/* About page */
+#about > h3{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.bio{
+  display: grid;
+  grid-template-columns: 440px 1fr;    
+  gap: 1rem;
+  align-items: start;
+}
+.bio img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .25rem;
+  border: 1px solid rgba(205,199,192,1);
+}
+.bio-text p{ margin: 0 0 1rem; 
+}
+
+/* Footer */
+#site-footer{
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.link-back a{
+  color: rgba(124,129,127,1);
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+.link-back a:hover{
+  color: rgba(205,199,192,1);
+  background: transparent;
+}
